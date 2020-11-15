@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Roboto";
+}
+.preloader-cont {
+    color: white;
+    width: 80%;
+    height: 80%;
+    border: 1px solid white;
+}
+.carouselCont {
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 900px;
+    color: white;
+}
+.carouselInfoCont {
+    margin: 30px;
+    width: 80%;
+    position: relative;
+    height: 400px;
+}
+.carousel {
+    width: 1000px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 500px;
+}
+
+.my-header-cont {
+    width: 80%;
+    height: 30px;
+    margin: auto;
+    display: block;
+}
+#carouselbutton {
+    position: absolute;
+    right: 100px;
+    bottom: 100px;
+}
+.cardCarouselContainer {
+    width: 300px;
+    height: 500px;
+    position: relative;
+    transform-style: preserve-3d;  
+}
+
+.scroll-hitbox {
+    position: absolute;
+    width: 1000px;
+    height: 400px;
+    left: 0px;
+    z-index: 800;
+}
+.carouselImage {
+    max-width: 100%;
+}
+.carousel-info-header-cont {
+    text-align: center;
+    margin: 10px auto;
+    width: 90%;
+    height: 50px;
+    font-family: "Roboto", sans-serif;
+    font-size: large;
+}
+#text-field {
+    color: white;
+    font-size: large;
+    font-family: "Roboto";
+    scrollbar-width: none;
+    box-shadow: inset 0 0  10px black;
+}
+.carousel-info-body-rating {
+    border: 1px solid black;
+    width: 80px;
+    height: 80px;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+}
+
+.carousel-info-body-text {
+    height: 80px;
+    overflow-y: scroll;
+    width: 540px;
+    border: 1px solid black;
+    margin: 20px;
+}
+
+.carousel-info-body-cont {
+    border: 1px solid black;
+    display: flex;
+    margin: 10px auto;
+    width: 90%;
+}
+
+.jumbo-container {
+    width: 80%;
+    height: 80%;
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.jumbo-imagediv {
+    width: 90%;
+    height: 45%;
+    border: 1px solid black;
+    margin: 8% 5%;
+}
+.jumbo-infodiv {
+    width: 90%;
+    height: 45%;
+    border: 1px solid black;
+    margin: 5% 5%;
+    color: white;
+}
+.trendingDescription {
+    text-align: center;
+    font-size: large;
+    margin-bottom: 10px;
+}
+.jumbo-top-index-cont {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: -10px;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.jumbo-image {
+    max-width: 90%;
+    max-height: 100%;
+    display: block;
+    margin: auto;
+}
+#trending-header {
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    color: white;
+}
+@keyframes rotate {
+    from {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
