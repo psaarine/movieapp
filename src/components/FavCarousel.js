@@ -36,7 +36,7 @@ const CardCarouselContainer = Styled.div`
     height: 450px;
     position: relative;
     transform-style: preserve-3d;
-    transform: rotateY(${props => props.current * 45}deg);
+    transform: perspective(3000px) rotateY(${props => props.current * 45}deg);
     transition: linear 1s;
 `
 

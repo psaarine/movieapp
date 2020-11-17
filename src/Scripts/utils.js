@@ -1,10 +1,17 @@
 import {apikey, listId} from "./../apiinfo";
 
 export async function dataFetcher(dataHandler, screenHandler, trendHandler){
-    let baseUrl, items, captionImage, obj;
+    
+    /* 
+    This function fetches data from TMDb-api and returns it to the main app component
+    */
+    
+    let baseUrl, items, obj;
     let apiData = [];
     let index = 0;
     let size = "w500";
+
+    // I am testing the await method here
     
     await fetch(`https://api.themoviedb.org/3/configuration?api_key=${apikey}`).then(res => res.json()).then(res => {
         baseUrl = res.images.base_url;
@@ -12,7 +19,6 @@ export async function dataFetcher(dataHandler, screenHandler, trendHandler){
 
     await fetch(`https://api.themoviedb.org/3/list/${listId}?api_key=${apikey}`).then(res => res.json()).then(res => {
         items = res.items;
-        captionImage = res;
     })
 
     items.forEach(element => {
@@ -28,8 +34,9 @@ export async function dataFetcher(dataHandler, screenHandler, trendHandler){
 
 
     });
+
+    // Data fetched from my list is given to the api.
     dataHandler(apiData);
-    screenHandler(1);
 
     fetch(`https://api.themoviedb.org/3/trending/movie/day?api_key=${apikey}`).then(res => res.json())
     .then(res => {
@@ -86,6 +93,13 @@ export function screenHandler(screen){
 }
 
 export function wheelHandler(e, handler){
+    /* 
+    This function handles scroll on static elements.
+    This is also responsible for the pagination of my trending-page.
+    First parameter is basic scroll event, second parameter is reducerhooks handler to update 
+    pagination.
+    */
+    
     e.preventDefault();
     
     const jumbotron = document.getElementById("jumbo-cont");
