@@ -12,7 +12,7 @@ export const Preloader = (props) => {
              so make sure you dont miss it!</p></div>
             <div className="preloader-button-cont">
 
-        {props.children}
+            {props.children}
             </div>
     </div>
     );
