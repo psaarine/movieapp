@@ -42,6 +42,7 @@ function App() {
   useEffect(() => {
     dataFetcher(setData, setScreen, setTrending);
     window.onwheel = (e) => wheelHandler(e, setPaginationIndex);
+    window.addEventListener("wheel", function(e){e.preventDefault()}, {passive:false}); // I had to add this later since due to changes all handlers are passive by default
   }, [])
 
   useEffect(() => {
